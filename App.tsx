@@ -33,7 +33,8 @@ export default function CustomizedInputBase() {
   };
 
   return (
-    <div>
+    <div style= { { fontFamily: 'Arial, Verdana, Calibri' }}>
+      <p style= { { color: 'blue' }}>Gunters React UI Test with MUI</p>
       <div>
         <InputLabel className="inputblock">Contact</InputLabel>
         <Paper
@@ -107,6 +108,25 @@ export default function CustomizedInputBase() {
           3030, Allgemein, 21.02.2001 - 31.12.2999
         </FormHelperText>
       </div>
+      <br/>
+      <br/>
+      <ul>Ziele<br/><br/>
+        <li>Beim Contact das blaue Symbol ist die Uniserv Suche, evtl. mit Mouse Over anzeigen, oder spezielles Uniserv-Symbol verwenden?</li>
+        <li>Ein Klick auf die Lupe öffnet die CRM Suchhilfe mit einem von uns bestimmten Default View, der Default View ist fix hinterlegt</li>
+        <li>Mit einem Mouse Over offenbart sich ein Lösch Button, mit dem man die EIngabe löschen kann</li>
+        <li>In die Text-Box kann man einen Key, Nummer oder einen sonstigen String eingeben.</li>
+            <ul>
+                <li>Beim verlassen der Input-Box (OnBlur) wird über die WebApi eine Suche gestartet.</li>
+                <li>Wird ein Treffer gefunden, dann wird das Namens-Feld aus CRM in der Text-Box angezeigt.</li>
+                <li>Wird kein Treffer gefunden, dann wird der Input gelöscht</li>
+                <li>Werden mehrere Treffer gefunden, dann öffnet sich die Suchhilfe mit der vorausgefüllten Suchzeile</li>
+          </ul>
+        
+        <li>Unterhalb der Suchhilfe werden, wenn ein Wert gefunden wird, vordefinierte Details (max 2 oder 3 Felder) unterhalb angezeigt, bei einer PSN z.B. ContactNumber und statecode, bei einer Kampagnenaktivit"t zum Beispiel Short Name, Kez und Valid-From/Until</li>
+        <li>Die Schriftart im Input-Element ist Schwarz, erst beim Mouse-Over offenbart sich eine blaue unterstrichene Schrift, die angeklickt das Element in einem neuen Fenster im CRM öffnet </li>
+        <li>Ein Mussfeld wird mit einem roten Stern links markiert</li>
+        <li>Schlägt eine Mussfeldprüfiung fehl, dann wird der Rahmen um das Input-Feld rot</li>
+      </ul>
     </div>
   );
 }
